@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
-import "./navbar.css";
+import { useMode } from "../modeContext";
 export default function NavBar() {
+    const { mode, toggleMode } = useMode();
     return (
         <nav className="navbar">
             <div>

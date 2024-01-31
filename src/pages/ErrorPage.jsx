@@ -5,7 +5,7 @@ export default function ErrorPage () {
             <h2>404</h2>
             <p>Page not found</p>
             <div>
-                Go back to <Link to="/">Home</Link>
+                Go back to <Link to="/" className="home-link">Home</Link>
             </div>
         </div>
     )

@@ -3,8 +3,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
 import ErrorPage from './pages/ErrorPage';
-import './App.css'
 import NavBar from './components/NavBar';
+import { ModeProvider } from './modeContext';
 
 const HeaderLayout = () => {
   return (
@@ -39,9 +39,11 @@ function App() {
     }
   ])
   return (
-    <div>
-      <RouterProvider router={router} />
-    </div>
+    <ModeProvider>
+      <div>
+        <RouterProvider router={router} />
+      </div>
+    </ModeProvider>
   )
 }
 
