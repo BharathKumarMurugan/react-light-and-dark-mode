@@ -9,6 +9,12 @@ export default function NavBar() {
                 <Link to="/about">About</Link>
                 <Link to="/products">Products</Link>
             </div>
+            <div className="switch-mode">
+                <label>
+                    <input type="checkbox" onChange={toggleMode} value={mode} checked={mode === "dark"}/>
+                    <span className="slider slider-pin"></span>
+                </label>
+            </div>
         </nav>
     )
 }

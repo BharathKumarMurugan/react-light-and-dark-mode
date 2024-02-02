@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const ModeContext = createContext();
 export const useMode = () => {
@@ -11,6 +11,9 @@ export const ModeProvider = ({ children }) => {
         setIsDarkMode((isDarkMode) => !isDarkMode);
     };
     const mode = isDarkMode ? "dark" : "light";
+    useEffect(()=> {
+        document.documentElement.setAttribute("data-mode", mode);
+    }, [isDarkMode])
     return (
         <ModeContext.Provider value={{ mode, toggleMode }}>
             {children}
