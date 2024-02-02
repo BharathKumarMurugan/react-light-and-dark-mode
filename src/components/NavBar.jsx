@@ -12,6 +12,8 @@ export default function NavBar() {
             <div className="switch-mode">
                 <label>
                     <input type="checkbox" onChange={toggleMode} value={mode} checked={mode === "dark"}/>
+                    {/* <ion-icon name="cloudy-night-outline" className="moon"></ion-icon>
+                    <ion-icon name="partly-sunny-outline" className="sun"></ion-icon> */}
                     <span className="slider slider-pin"></span>
                 </label>
             </div>
